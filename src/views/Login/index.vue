@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <div class="container">
-      <div class="form-box">
-        <div class="register-box hidden">
+      <div ref="form-box" class="form-box">
+        <div ref="register-box" class="register-box hidden">
           <h1>register</h1>
           <input placeholder="用户名" type="text">
           <input placeholder="邮箱" type="email">
@@ -10,7 +10,7 @@
           <input placeholder="确认密码" type="password">
           <button>注册</button>
         </div>
-        <div class="login-box">
+        <div ref="login-box" class="login-box">
           <h1>login</h1>
           <input placeholder="用户名" type="text">
           <input placeholder="密码" type="password">
@@ -18,18 +18,18 @@
         </div>
       </div>
       <div class="con-box left">
-        <h2>欢迎来到<span>栗子的家</span></h2>
+        <h2>欢迎来到<span>栗子的博客</span></h2>
         <p>快来一起学习<span>编程知识吧</span></p>
-        <img alt="" src="../../assets/logo.png">
+        <img alt="" src="../../assets/images/login1.jpg">
         <p>已有帐号</p>
-        <button id="login">去登录</button>
+        <button ref="toLogin" @click="toLogin">去登录</button>
       </div>
-      <div class="con-box right">
-        <h2>欢迎来到<span>栗子的家</span></h2>
+      <div ref="" class="con-box right">
+        <h2>欢迎来到<span>栗子的博客</span></h2>
         <p>快来看看<span>咱们的温馨小家吧</span></p>
-        <img alt="" src="../../assets/logo.png">
+        <img alt="" src="../../assets/images/login2.jpg">
         <p>没有账号？</p>
-        <button id="login">去注册</button>
+        <button ref="toRegister" @click="toRegister">去注册</button>
       </div>
     </div>
   </div>
@@ -37,7 +37,20 @@
 
 <script>
 export default {
-  name: "index"
+  name: "index",
+  methods: {
+    toRegister() {
+      console.log(this.$refs["form-box"].style)
+      this.$refs["form-box"].style.transform = 'translateX(80%)'
+      this.$refs["login-box"].classList.add('hidden')
+      this.$refs["register-box"].classList.remove('hidden')
+    },
+    toLogin() {
+      this.$refs["form-box"].style.transform = 'translateX(0%)'
+      this.$refs["login-box"].classList.remove('hidden')
+      this.$refs["register-box"].classList.add('hidden')
+    }
+  }
 }
 </script>
 
@@ -54,9 +67,9 @@ export default {
 }
 
 .container {
-  background-color: #ccc;
-  width: 60vw;
-  height: 60vh;
+  background-color: #fff;
+  width: 800px;
+  height: 600px;
   border-radius: 10px;
   //盒子阴影
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -80,7 +93,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 0;
+    z-index: 2;
     //动画过渡 加速后减速
     transition: 0.5s ease-in-out;
 
@@ -92,11 +105,13 @@ export default {
 
       h1 {
         text-align: center;
-        margin-bottom: 30px;
         //大写
         text-transform: uppercase;
         color: #fff;
         letter-spacing: 10px;
+        position: absolute;
+        top: 150px
+
       }
 
       input {
@@ -123,7 +138,8 @@ export default {
 
       button {
         width: 70%;
-        margin-top: 40px;
+        position: absolute;
+        bottom: 140px;
         background-color: #f6f6f6;
         outline: none;
         border-radius: 10px;
@@ -150,7 +166,7 @@ export default {
   }
 
   .con-box {
-    width: 50%;
+    width: 51%;
     //绝对定位 垂直水平居中
     display: flex;
     flex-direction: column;
@@ -161,8 +177,57 @@ export default {
     top: 50%;
     transform: translateY(-50%);
 
+    h2 {
+      color: #8e9aaf;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: #8e9aaf;
+      text-align: center;
+    }
+
+    span {
+      color: #d3b7d8;
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      opacity: 0.9;
+      margin: 50px 0
+    }
+
+    button {
+      margin-top: 3%;
+      background-color: #fff;
+      color: #a262ad;
+      border: 1px solid #d3b7d8;
+      padding: 5px 10px;
+      border-radius: 5px;
+      letter-spacing: 2px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d3b7d8;
+      color: #fff
+    }
+  }
+
+  .left {
+    left: -2%;
+  }
+
+  .right {
+    right: -2%;
   }
 }
-
-
 </style>
