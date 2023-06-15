@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="blog-content">
     <div class="ui container">
       <!-- header -->
@@ -133,10 +134,14 @@
       </div>
     </div>
   </div>
+=======
+  <div>分类</div>
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
   name: "Index",
   methods: {
     toInformation() {
@@ -201,4 +206,12 @@ export default {
     padding-right: 10px !important;
   }
 }
+=======
+  name: "Index"
+}
+</script>
+
+<style scoped>
+
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
 </style>

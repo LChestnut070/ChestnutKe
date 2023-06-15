@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "chestnutke_blog",
   "version": "1.0.0",
   "description": "A Vue.js project",
@@ -64,10 +65,62 @@
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
+=======
+  "name": "chestnutke",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "amfe-flexible": "^2.2.1",
+    "ant-design-vue": "^1.7.8",
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.9",
+    "less": "^4.1.2",
+    "less-loader": "^6.0.0",
+    "lib-flexible": "^0.3.2",
+    "postcss": "^8.4.14",
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.15",
+    "@vue/cli-plugin-eslint": "~4.5.15",
+    "@vue/cli-service": "~4.5.15",
+    "autoprefixer": "^7.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "postcss-import": "^10.0.0",
+    "postcss-pxtorem": "^5.1.1",
+    "postcss-url": "^7.0.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
+<<<<<<< HEAD
     "not ie <= 8"
+=======
+    "not dead"
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
   ]
 }

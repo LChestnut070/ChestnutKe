@@ -1,10 +1,26 @@
 .DS_Store
+<<<<<<< HEAD
 node_modules/
 /dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /semantic
+=======
+node_modules
+/dist
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
 
 # Editor directories and files
 .idea
@@ -13,3 +29,7 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+<<<<<<< HEAD
+=======
+*.sw?
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2

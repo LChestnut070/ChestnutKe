@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="blog-content ">
     <div class="ui container ">
       <div class="ui grid stackable">
@@ -245,10 +246,27 @@ export default {
       this.$router.push({ path: 'information' })
     }
   }
+=======
+  <div class="contenter">
+
+    <!--    公共博客主体内容部分-->
+
+
+  </div>
+</template>
+
+<script>
+// import CommonContent from "@/components/CommonContent";
+
+export default {
+  name: "Index",
+  components: {}
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
 }
 </script>
 
 <style lang="less" scoped>
+<<<<<<< HEAD
 .transparents {
   background: rgba(255, 255, 255, 0.1) !important;
 }
@@ -301,4 +319,8 @@ export default {
     padding-right: 10px !important
   }
 }
+=======
+
+
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
 </style>

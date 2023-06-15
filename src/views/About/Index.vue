@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="blog-content ">
         <div class="ui container ">
             <div class="ui grid stackable">
@@ -91,4 +92,17 @@ export default {
     }
 
 }
+=======
+  <div>分类</div>
+</template>
+
+<script>
+export default {
+  name: "Index"
+}
+</script>
+
+<style scoped>
+
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
 </style>

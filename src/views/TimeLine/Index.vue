@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="blog-content">
         <div class="ui container">
             <!-- header -->
@@ -115,4 +116,17 @@ export default {
         padding-right: 10px !important;
     }
 }
+=======
+  <div>时间线</div>
+</template>
+
+<script>
+export default {
+  name: "Index"
+}
+</script>
+
+<style scoped>
+
+>>>>>>> a049eca22cb134649b1f996b653580a3477bc6f2
 </style>
